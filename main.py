@@ -3,7 +3,7 @@ class Auto:
     def __init__(self,modelo,precio,asientos,marca,motor,registro):
         self.modelo=modelo
         self.precio= precio
-        self.asientos= asientos=[]
+        self.asientos=asientos
         self.marca=marca
         self.motor=motor
         self.registro=registro
@@ -18,11 +18,9 @@ class Auto:
     def verificarIntegridad(self):
         if self.registro!=self.motor.registro:
             return "Las piezas no son originales"
-        
-        for j in self.asientos:
+        for j in range(len(self.asientos)):
             if self.asientos[j]!=None and self.asientos[j].registro!=self.registro:
-                return "Las piezas no son originales"
-     
+                return "Las piezas no son originales" 
         return "Auto original"
 
 class Asiento:
