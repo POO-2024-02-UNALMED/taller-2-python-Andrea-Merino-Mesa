@@ -10,7 +10,7 @@ class Auto:
         
     def cantidadAsientos(self):
         casientos=0
-        for i in self.asientos:
+        for i in range(len(self.asientos)):
             if self.asientos[i]!=None:
                 casientos+=1
         return casientos
