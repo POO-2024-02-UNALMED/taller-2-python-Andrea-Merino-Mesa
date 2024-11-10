@@ -3,10 +3,10 @@ class Auto:
     def __init__(self,modelo,precio,asientos,marca,motor,registro):
         self.modelo=modelo
         self.precio= precio
+        self.asientos= Asiento = []
         self.marca=marca
-        self.registro=registro
-        self.asientos= list(Asiento)
         self.motor=Motor
+        self.registro=registro
         
     def cantidadAsientos(self):
         casientos=0
@@ -46,4 +46,4 @@ class Motor:
         
     def asignarTipo(self,nuevotipo):
         if nuevotipo=="electrico" or nuevotipo=="gasolina":
-            tipo=nuevotipo
+            self.tipo=nuevotipo
